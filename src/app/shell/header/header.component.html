@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="header">
+    <div class="left-side">
+      <div class="logo">
+        <img src="../../../assets/logo-dark.svg" />
+      </div>
+    </div>
+    <div class="right-side">
+      <div class="new-task">
+        <button>+ Add New Task</button>
+      </div>
+      <div
+        class="sidenav-toggler"
+        (click)="sidenavToggler()"
+        matTooltip="Toggle Sidenav"
+      >
+        <div class="closed" *ngIf="!sidenavOpened; else opened">
+          <div class="hr-line"></div>
+          <div class="hr-line"></div>
+          <div class="hr-line"></div>
+        </div>
+        <ng-template #opened>
+          <div class="close">X</div>
+        </ng-template>
+      </div>
+    </div>
+  </div>
+</div>

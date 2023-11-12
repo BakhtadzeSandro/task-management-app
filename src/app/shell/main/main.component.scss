@@ -1,0 +1,15 @@
+app-header {
+  width: 100%;
+}
+nb-sidebar {
+  animation: fadeInOut 2s linear 1;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,56 @@
+.container {
+  .sidebar {
+    .boards-quantity {
+      p {
+        color: #828fa3;
+        font-family: Plus Jakarta Sans;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: 2.4px;
+      }
+    }
+    .board-box {
+      margin-top: 20px;
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      .board-name {
+        cursor: pointer;
+        margin-top: 8px;
+        p {
+          color: #828fa3;
+          font-feature-settings: "clig" off, "liga" off;
+          font-family: Plus Jakarta Sans;
+          font-size: 15px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+        }
+      }
+    }
+    .create-board {
+      margin-top: 20px;
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      p {
+        cursor: pointer;
+        margin-top: 8px;
+        color: #635fc7;
+        font-feature-settings: "clig" off, "liga" off;
+        font-family: Plus Jakarta Sans;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+      }
+      .board-logo {
+        img {
+          fill: #635fc7;
+        }
+      }
+    }
+  }
+}
