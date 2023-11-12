@@ -1,17 +1,23 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { MainComponent } from './shell/main/main.component';
+import { BoardComponent } from './pages/board/board.component';
+import { ChooseBoardComponent } from './pages/choose-board/choose-board.component';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'main',
-    pathMatch: 'full',
-  },
-  {
-    path: 'main',
     component: MainComponent,
-    children: [],
+    children: [
+      {
+        path: '',
+        component: ChooseBoardComponent,
+      },
+      {
+        path: 'board/:id',
+        component: BoardComponent,
+      },
+    ],
   },
 ];
 

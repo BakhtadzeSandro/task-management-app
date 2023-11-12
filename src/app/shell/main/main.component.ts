@@ -32,7 +32,7 @@ import { Component } from '@angular/core';
   ],
 })
 export class MainComponent {
-  toggleSidenav = true;
+  toggleSidenav = false;
 
   sidenavToggleHandler() {
     this.toggleSidenav = !this.toggleSidenav;

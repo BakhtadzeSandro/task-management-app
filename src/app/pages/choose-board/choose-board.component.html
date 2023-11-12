@@ -1,0 +1,5 @@
+<app-board-name-card
+  *ngFor="let board of data?.boards"
+  [boardName]="board.name"
+  (click)="NavigateToBoard(board.name)"
+></app-board-name-card>

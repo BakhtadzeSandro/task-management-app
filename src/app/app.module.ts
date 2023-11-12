@@ -14,6 +14,10 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { NbThemeModule, NbLayoutModule, NbSidebarModule } from '@nebular/theme';
 import { NbEvaIconsModule } from '@nebular/eva-icons';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { EmptyBoardComponent } from './pages/empty-board/empty-board.component';
+import { BoardComponent } from './pages/board/board.component';
+import { ChooseBoardComponent } from './pages/choose-board/choose-board.component';
+import { BoardNameCardComponent } from './components/board-name-card/board-name-card.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +25,10 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     HeaderComponent,
     SidebarComponent,
     MainComponent,
+    EmptyBoardComponent,
+    BoardComponent,
+    ChooseBoardComponent,
+    BoardNameCardComponent,
   ],
   imports: [
     BrowserModule,
