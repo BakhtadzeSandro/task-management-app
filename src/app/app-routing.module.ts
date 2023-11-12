@@ -14,7 +14,7 @@ const routes: Routes = [
         component: ChooseBoardComponent,
       },
       {
-        path: 'board/:id',
+        path: 'board/:name',
         component: BoardComponent,
       },
     ],

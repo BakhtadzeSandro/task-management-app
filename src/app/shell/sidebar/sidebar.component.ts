@@ -13,7 +13,6 @@ export class SidebarComponent implements OnInit {
     let globalData = localStorage.getItem('data');
     if (globalData) {
       this.data = JSON.parse(globalData);
-      console.log(this.data);
     }
   }
 }
