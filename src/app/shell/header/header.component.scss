@@ -3,6 +3,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    .left-side {
+      .logo {
+        cursor: pointer;
+      }
+    }
     .right-side {
       display: flex;
       gap: 20px;
