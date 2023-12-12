@@ -5,6 +5,10 @@ app-header {
 //   animation: fadeInOut 2s linear 1;
 // }
 
+:host ::ng-deep nb-layout-column {
+  overflow-x: scroll !important;
+}
+
 @keyframes fadeInOut {
   0% {
     opacity: 0;

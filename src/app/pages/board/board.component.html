@@ -1,1 +1,18 @@
-<p>board works!</p>
+<div class="container">
+  <div
+    class="column"
+    *ngFor="let column of selectedBoard?.columns"
+    cdkDropList
+    #columnList="cdkDropList"
+    [cdkDropListData]="column.tasks"
+    [cdkDropListConnectedTo]="connectedLists"
+    (cdkDropListDropped)="onDrop($event)"
+  >
+    <div class="column-title">
+      <p>{{ column.name }} ({{ column.tasks.length }})</p>
+    </div>
+    <div class="task" *ngFor="let task of column.tasks" cdkDrag>
+      <app-task-card [task]="task"></app-task-card>
+    </div>
+  </div>
+</div>

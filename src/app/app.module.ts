@@ -18,6 +18,8 @@ import { EmptyBoardComponent } from './pages/empty-board/empty-board.component';
 import { BoardComponent } from './pages/board/board.component';
 import { ChooseBoardComponent } from './pages/choose-board/choose-board.component';
 import { BoardNameCardComponent } from './components/board-name-card/board-name-card.component';
+import { TaskCardComponent } from './components/task-card/task-card.component';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 
 @NgModule({
   declarations: [
@@ -29,6 +31,7 @@ import { BoardNameCardComponent } from './components/board-name-card/board-name-
     BoardComponent,
     ChooseBoardComponent,
     BoardNameCardComponent,
+    TaskCardComponent,
   ],
   imports: [
     BrowserModule,
@@ -44,6 +47,7 @@ import { BoardNameCardComponent } from './components/board-name-card/board-name-
     NbSidebarModule.forRoot(),
     NbThemeModule,
     MatTooltipModule,
+    DragDropModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

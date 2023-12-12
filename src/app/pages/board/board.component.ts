@@ -2,6 +2,11 @@ import { Component, inject } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Board, Data } from '../../models/board.model';
 import { Subject, takeUntil } from 'rxjs';
+import {
+  CdkDragDrop,
+  moveItemInArray,
+  transferArrayItem,
+} from '@angular/cdk/drag-drop';
 
 @Component({
   selector: 'app-board',
@@ -11,7 +16,8 @@ import { Subject, takeUntil } from 'rxjs';
 export class BoardComponent {
   data: Data | undefined;
   selectedBoardName = '';
-  selectedBoard: Board | undefined;
+  connectedLists: string[] = [];
+  selectedBoard: any;
   activatedRoute = inject(ActivatedRoute);
   router = inject(Router);
   endSubs$ = new Subject<void>();
@@ -41,6 +47,38 @@ export class BoardComponent {
     if (this.data) {
       this.selectedBoard = this.data.boards.find(
         (board) => board.name === name
+      );
+      this.connectedLists = this.selectedBoard?.columns.map(
+        (col: any) => col.name
+      );
+      console.log(this.connectedLists);
+    }
+  }
+
+  getRandomColor(): string {
+    const letters = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+  }
+
+  onDrop(event: any) {
+    if (event.previousContainer === event.container) {
+      // If items are moved within the same container
+      moveItemInArray(
+        event.container.data,
+        event.previousIndex,
+        event.currentIndex
+      );
+    } else {
+      // If items are moved between containers
+      transferArrayItem(
+        event.previousContainer.data,
+        event.container.data,
+        event.previousIndex,
+        event.currentIndex
       );
     }
   }
